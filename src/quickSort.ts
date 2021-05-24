@@ -1,11 +1,11 @@
-function qucikSoft(arr: number[], left: number, right: number): void {
+function qucikSort(arr: number[], left?: number, right?: number): void {
   if (left === undefined) left = 0;
   if (right === undefined) right = arr.length - 1;
   if (left >= right) return;
 
   const mid = getMid(arr, left, right);
-  qucikSoft(arr, left, mid - 1);
-  qucikSoft(arr, mid + 1, right);
+  qucikSort(arr, left, mid - 1);
+  qucikSort(arr, mid + 1, right);
 }
 
 function getMid(arr: number[], left: number, right: number): number {
@@ -19,5 +19,4 @@ function getMid(arr: number[], left: number, right: number): number {
   arr[left] = pivot;
   return left;
 }
-
-module.exports = qucikSoft;
+export default qucikSort;

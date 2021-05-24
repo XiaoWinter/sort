@@ -1,4 +1,4 @@
-const quickSort = require("./quickSoft");
+import quickSort from "../src/quickSort";
 
 function generateArr(size = 10): number[] {
   const arr = [];
@@ -16,13 +16,22 @@ function generateArr(size = 10): number[] {
   return arr;
 }
 
-function testSoft(): void {
+function testSort(): void {
   const arr = generateArr(15);
 
   console.log("arr", arr);
   quickSort(arr);
-
   console.log("softArr", arr);
+  if (ascSortTest(arr)) {
+    console.error("not pass");
+  }
 }
 
-testSoft();
+function ascSortTest(arr: number[]): boolean {
+  for (let i = 0; i < arr.length - 1; i++) {
+    if (arr[i] > arr[i + 1]) return false;
+  }
+  return true;
+}
+
+export default testSort;
