@@ -1,0 +1,19 @@
+{
+  "name": "quicksoft",
+  "version": "1.0.0",
+  "description": "quicksoft",
+  "main": "index.js",
+  "dependencies": {
+    "typescript": "^4.2.4"
+  },
+  "devDependencies": {
+    "@types/node": "^15.6.0"
+  },
+  "scripts": {
+    "build": "tsc",
+    "test": "tsc && node lib/test",
+    "start": "tsc --watch"
+  },
+  "author": "",
+  "license": "ISC"
+}
