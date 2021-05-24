@@ -22,7 +22,7 @@ function testSort(): void {
   console.log("arr", arr);
   quickSort(arr);
   console.log("softArr", arr);
-  if (ascSortTest(arr)) {
+  if (!ascSortTest(arr)) {
     console.error("not pass");
   }
 }
