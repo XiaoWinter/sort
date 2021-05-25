@@ -68,7 +68,7 @@ function heapSort(tree: number[]) {
  */
 function swap(tree: number[], i: number, j: number): void {
   const max = tree.length - 1;
-  if (i > max || j > max) {
+  if (i > max || j > max || i < 0 || j < 0) {
     throw new ArrayIndexOutOfBoundsError();
   }
   const temp = tree[i];
