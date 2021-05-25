@@ -7,9 +7,17 @@
     {
       "type": "pwa-node",
       "request": "launch",
-      "name": "Launch Program",
+      "name": "Launch Test",
       "skipFiles": ["<node_internals>/**"],
       "program": "${workspaceFolder}\\lib\\test\\index.js",
+      "outFiles": ["${workspaceFolder}/**/*.js"]
+    },
+    {
+      "type": "pwa-node",
+      "request": "launch",
+      "name": "Launch heapSort",
+      "skipFiles": ["<node_internals>/**"],
+      "program": "${workspaceFolder}\\lib\\src\\heapSort.js",
       "outFiles": ["${workspaceFolder}/**/*.js"]
     }
   ]
